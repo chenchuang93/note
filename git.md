@@ -8,3 +8,7 @@ git add README.md
 git commit -m "first commit"  
 git remote add origin git@github.com:chenchuang93/SourceCode.git  
 git push -u origin master  
+
+# 提交代码
+git commit -m "first commit"
+git push [remote-name] [branch-name]
