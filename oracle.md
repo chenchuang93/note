@@ -16,10 +16,12 @@ grant select any sequence,create materialized view to chuang;
 ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;  
 
 # 中文乱码
-select userenv('language') from dual; //查看server段编码   
+select userenv('language') from dual; //查看server段编码  
+``` 
 USERENV('LANGUAGE')
 ----------------------------------------------------
 AMERICAN_AMERICA.AL32UTF8
+```
 
 再客户端设置环境变量NLS_LANG=AMERICAN_AMERICA.AL32UTF8
 
