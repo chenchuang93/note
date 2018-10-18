@@ -24,11 +24,19 @@ AMERICAN_AMERICA.AL32UTF8
 再客户端设置环境变量NLS_LANG=AMERICAN_AMERICA.AL32UTF8
 
 # tnsnames.ora
+```
 XE = 
-  (DESCRIPTION = 
-	(ADDRESS_LIST = 
-	(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.10)(PORT = 1521))) 
-	(CONNECT_DATA = 
-	  (SERVICE_NAME = xe) 
+	(DESCRIPTION = 
+		(ADDRESS_LIST = 
+		(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.10)(PORT = 1521))) 
+		(CONNECT_DATA = 
+			(SERVICE_NAME = xe) 
+		)
 	)
-  )
+```
+
+# 启动监听
+lsnrctl start
+
+# sql脚本地址
+http://www.forta.com/books/0672336073/  
