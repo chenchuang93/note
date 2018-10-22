@@ -26,6 +26,17 @@ while (entries.hasNext()) {
 }
 ```
 # String StringBuffer StringBuild
-
+都是操作字符串
+StringBuffer是线程安全的
 # io
+bio 同步阻塞  
+nio 同步非阻塞  
+aio 异步非阻塞  
+# 多态
+&ensp;&ensp;多态是同一个行为具有多个不同表现形式或形态的能力。多态就是同一个接口，使用不同的实例而执行不同操作。  
+&ensp;&ensp;多态的条件：继承，重写，父类引用指向子类对象。
+
+# 线程池
+
+
 
