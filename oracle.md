@@ -28,13 +28,13 @@ AMERICAN_AMERICA.AL32UTF8
 # tnsnames.ora
 ```
 XE = 
-	(DESCRIPTION = 
-		(ADDRESS_LIST = 
-		(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.10)(PORT = 1521))) 
-		(CONNECT_DATA = 
-			(SERVICE_NAME = xe) 
-		)
-	)
+ (DESCRIPTION = 
+  (ADDRESS_LIST = 
+  (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.10)(PORT = 1521)))
+  (CONNECT_DATA = 
+    (SERVICE_NAME = xe) 
+  )
+ )
 ```
 
 # 启动监听
@@ -42,3 +42,31 @@ lsnrctl start
 
 # sql脚本地址
 http://www.forta.com/books/0672336073/  
+
+# 存储过程
+```
+create procedure MailingListCount (
+  ListCount out integer
+ )
+ is v_rows integer;
+begin 
+  select count(*) into v_rows from customers where not cust_email is null;
+  ListCount := v_rows;
+end;
+```
+调用
+```
+SQL> var ReturnValue NUMBER
+SQL> EXEC MailingListCount(:ReturnValue);
+
+PL/SQL procedure successfully completed
+
+ReturnValue
+---------
+3
+SQL> print ReturnValue
+ReturnValue
+---------
+3
+```
+
