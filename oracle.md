@@ -238,6 +238,9 @@ select cust_name,
  order by cust_name;
 ```
 
+# 联结表
+
+
 
 
 
