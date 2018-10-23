@@ -1,3 +1,13 @@
+# docker安装
+ubuntu下 
+```
+sudo apt-get update
+sudo apt-get install docker.io
+```
+
+sudo apt-get remove docker-engine docker.io  
+sudo apt-get remove docker-ce  
+sudo apt-get autoremove docker
 # 启动docker
 service docker start  
 # 查看容器列表
