@@ -144,7 +144,7 @@ select cust_name, cust_contact
  where soundex(cust_contact) = soundex('Michael Green');
 ```
 
-# 日期和时间处理函数
+日期和时间处理函数  
 postgresql中是date_part(),sql server是datepart()
 ```
 select order_num, order_date
