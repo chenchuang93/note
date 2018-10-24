@@ -239,9 +239,82 @@ select cust_name,
 ```
 
 # 联结表
+叉联结，没有where则返回笛卡儿积
+```
+select vend_name, prod_name, prod_price
+  from vendors, products
+```
+内联结。等值联结。
+```
+select vend_name, prod_name, prod_price
+  from vendors, products
+ where vendors.vend_id = products.vend_id;
+```
+```
+select vend_name, prod_name, prod_price
+  from vendors inner join products
+    on vendors.vend_id = products.vend_id;
+```
+使用连接替代子查询
+```
+select cust_name, cust_contact
+  from customers
+ where cust_id in
+       (select cust_id
+          from orders
+         where order_num in
+               (select order_num from orderitems where prod_id = 'RGAN01'));
 
+select cust_name, cust_contact
+  from customers, orders, orderitems
+ where customers.cust_id = orders.cust_id
+   and orders.order_num = orderitems.order_num
+   and orderitems.prod_id = 'RGAN01';
+```
+自联结。oracle中列别名能用as，表别名不能用as。
+```
+select c1.cust_id, c1.cust_name, c1.cust_contact
+  from customers c1, customers c2
+ where c1.cust_name = c2.cust_name
+   and c2.cust_contact = 'Jim Jones';
+```
+自然联结。大部分内联结都是自然联结。
+```
+```
+外联结
+```
+select customers.cust_id, orders.order_num
+  from customers
+  left outer join orders
+    on customers.cust_id = orders.cust_id;
+```
+带聚集函数的联结
+```
+select customers.cust_id, count(orders.order_num) as num_ord
+  from customers
+ inner join orders
+    on customers.cust_id = orders.cust_id
+ group by customers.cust_id;
+```
+```
+select customers.cust_id, count(orders.order_num) as num_ord
+  from customers
+  left outer join orders
+    on customers.cust_id = orders.cust_id
+ group by customers.cust_id;
+```
 
-
+# 组合查询
+```
+select cust_name, cust_contact, cust_email
+  from customers
+ where cust_state in ('IL', 'IN', 'MI')
+union
+select cust_name, cust_contact, cust_email
+  from customers
+ where cust_name = 'Fun4All'
+ order by cust_name, cust_contact;
+```
 
 
 

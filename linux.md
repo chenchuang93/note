@@ -43,3 +43,7 @@ wsl(windows subsystem forlinux)。wsl不支持linux kernel的一些特性。wsl�
             /y - 如果提供了用户名，则不提示创建密码
 ```
 2、应用商店搜索linux
+
+# ssh
+
+ssh -p xx user@ip
