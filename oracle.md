@@ -71,7 +71,7 @@ ReturnValue
 ---------
 3
 ```
-# order by
+# 排序order by
 ```
 select prod_name 
 from products 
@@ -95,7 +95,7 @@ from products
 order by prod_price desc, prod_name;
 ```
 
-# like
+# 模糊查询like
 区分大小写。
 ```
 select prod_id, prod_name 
