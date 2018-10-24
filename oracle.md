@@ -46,11 +46,14 @@ lsnrctl start
 http://www.forta.com/books/0672336073/  
 
 # 存储过程
+存储过程的is与as在存储过程(PROCEDURE)和函数(FUNCTION)中没有区别；  
+在视图(VIEW)中只能用AS不能用IS；  
+在游标(CURSOR)中只能用IS不能用AS。  
 ```
 create procedure MailingListCount (
   ListCount out integer
  )
- is v_rows integer;
+ is v_rows integer; -- 定义变量
 begin 
   select count(*) into v_rows from customers where not cust_email is null;
   ListCount := v_rows;
