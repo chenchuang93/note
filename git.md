@@ -9,6 +9,9 @@ git commit -m "first commit"
 git remote add origin git@github.com:chenchuang93/SourceCode.git  
 git push -u origin master  
 
+# 从远程仓库克隆
+git clone git@github.com:CyC2018/CS-Notes.git
+
 # 提交代码
 git commit -m "first commit"
 git push [remote-name] [branch-name]

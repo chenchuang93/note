@@ -1,3 +1,11 @@
+# 登陆
+sqlplus username/password@sid
+
+sqlplus / as sysdba
+
+# 切换用户
+conn /as sysdba
+
 # 创建表空间
 sqlplus / as sysdba  
 
@@ -43,7 +51,22 @@ XE =
 lsnrctl start
 
 # sql脚本地址
-http://www.forta.com/books/0672336073/  
+http://www.forta.com/books/0672336073/ 
+
+# 视图
+grant select any table, create view to chuang;
+```
+create view ProductCustomers as
+  select cust_name, cust_contact, prod_id
+    from customers, orders, orderItems
+   where customers.cust_id = orders.cust_id
+     and orderitems.order_num = orders.order_num;
+```
+```
+select cust_name, cust_contact
+  from ProductCustomers
+ where prod_id = 'RGAN01';
+```
 
 # 存储过程
 存储过程的is与as在存储过程(PROCEDURE)和函数(FUNCTION)中没有区别；  
