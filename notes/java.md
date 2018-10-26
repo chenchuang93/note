@@ -37,6 +37,16 @@ aio 异步非阻塞
 &ensp;&ensp;多态的条件：继承，重写，父类引用指向子类对象。
 
 # 线程池
+ExecutorService executorService = Executors.newSingleThreadExecutor();
+ThreadPoolExecutor类有4个构造方法对应4中线程池（ExecutorService）
+```
+public static ExecutorService newSingleThreadExecutor() {
+        return new FinalizableDelegatedExecutorService
+            (new ThreadPoolExecutor(1, 1,
+                                    0L, TimeUnit.MILLISECONDS,
+                                    new LinkedBlockingQueue<Runnable>()));
+    }
+```
 
-
+减少线程创建和销毁在时间个资源上的消耗。
 
