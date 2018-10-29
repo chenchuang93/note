@@ -54,6 +54,7 @@ lsnrctl start
 http://www.forta.com/books/0672336073/ 
 
 # 视图
+视图是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询。
 grant select any table, create view to chuang;
 ```
 create view ProductCustomers as
@@ -69,6 +70,8 @@ select cust_name, cust_contact
 ```
 
 # 存储过程
+存储过程就是为以后使用而保存的一条或多条sql语句。
+
 存储过程的is与as在存储过程(PROCEDURE)和函数(FUNCTION)中没有区别；  
 在视图(VIEW)中只能用AS不能用IS；  
 在游标(CURSOR)中只能用IS不能用AS。  
