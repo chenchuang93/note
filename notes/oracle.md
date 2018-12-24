@@ -53,6 +53,9 @@ lsnrctl start
 # sql脚本地址
 http://www.forta.com/books/0672336073/ 
 
+# 索引
+
+
 # 视图
 视图是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询。
 grant select any table, create view to chuang;
