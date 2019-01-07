@@ -24,3 +24,8 @@ git remote -v
 
 # 查看本地状态
 git status
+
+# 获取帮助
+git config --help
+git help config
+man git-config
