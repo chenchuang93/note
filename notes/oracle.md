@@ -109,7 +109,7 @@ select prod_name
 from products 
 order by prod_name;
 ```
-order by 是select语句中的最后一条语句。  
+· 
 ```
 select prod_id, prod_price, prod_name 
 from products 
