@@ -13,7 +13,7 @@ git push -u origin master
 git clone git@github.com:CyC2018/CS-Notes.git
 
 # 提交代码
-git commit -m "first commit"
+git commit -m "first commit" // git commit -a 
 git push [remote-name] [branch-name]
 
 # 同步代码
