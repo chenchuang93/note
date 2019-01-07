@@ -21,3 +21,6 @@ git pull
 
 # 查看url
 git remote -v
+
+# 查看本地状态
+git status
