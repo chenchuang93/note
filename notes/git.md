@@ -15,3 +15,9 @@ git clone git@github.com:CyC2018/CS-Notes.git
 # 提交代码
 git commit -m "first commit"
 git push [remote-name] [branch-name]
+
+# 同步代码
+git pull
+
+# 查看url
+git remote -v
