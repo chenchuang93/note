@@ -190,6 +190,7 @@ to_date
   where order_date between to_date('1-1-2012', 'dd-mm-yyyy') and
         to_date('12-31-2012', 'mm-dd-yyyy');
 ```
+row_number() 加一行数字
 
 # 聚集函数
 avg()对表中行数就行计数并计算其列值之和，求得该列的平均值。

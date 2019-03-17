@@ -47,3 +47,6 @@ wsl(windows subsystem forlinux)。wsl不支持linux kernel的一些特性。wsl�
 # ssh
 
 ssh -p xx user@ip
+
+
+https://kiwivm.64clouds.com/main-exec.php?mode=blacklistcheck
