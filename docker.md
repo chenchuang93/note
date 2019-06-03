@@ -18,5 +18,7 @@ sudo docker start container-name/container-id
 docker run -d -p 9090:8080 -p 1521:1521 --name xxxx wnameless/oracle-xe-11g  
 # 登陆容器
 docker exec -it container-id/container-name bash
+
+docker exec -it container-id/container-name redis-cli
 # 帮助文档
 docker --help
