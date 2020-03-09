@@ -1,4 +1,4 @@
-![git](./picture/c9e6830b94634d7e9745cc02b823fa94.jfif "xsssss")
+![图](./picture/c9e6830b94634d7e9745cc02b823fa94.jfif "xsssss")
 
 ```
 Workspace：工作区  
@@ -234,6 +234,7 @@ $ git reset --keep [commit]
 # 新建一个commit，用来撤销指定commit
 # 后者的所有变化都将被前者抵消，并且应用到当前分支
 $ git revert [commit]
+
 # 暂时将未提交的变化移除，稍后再移入
 $ git stash
 $ git stash pop
@@ -243,6 +244,7 @@ $ git stash pop
 ```
 # 生成一个可供发布的压缩包
 $ git archive
+
 # 获取帮助
 git config --help
 git help config
