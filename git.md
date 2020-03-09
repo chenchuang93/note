@@ -12,11 +12,14 @@ Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置�
 ```
 # 显示当前的Git配置
 $ git config --list
+
 # 编辑Git配置文件
 $ git config -e [--global]
+
 # 设置提交代码时的用户信息
 $ git config [--global] user.name "[name]"  
 $ git config [--global] user.email "[email address]"
+
 # 生成ssh
 ssh-keygen -t rsa -C "397063810@qq.com"
 ```
@@ -195,19 +198,26 @@ $ git reflog
 # 八、远程同步
 ```   
 #下载远程仓库的所有变动
-$ git fetch [remote]
+$ git fetch [remote]   
+
 # 显示所有远程仓库
 $ git remote -v
+
 # 显示某个远程仓库的信息
 $ git remote show [remote]
+
 # 增加一个新的远程仓库，并命名
 $ git remote add [shortname] [url]
+
 # 取回远程仓库的变化，并与本地分支合并
 $ git pull [remote] [branch]
+
 # 上传本地指定分支到远程仓库
 $ git push [remote] [branch]
+
 # 强行推送当前分支到远程仓库，即使有冲突
 $ git push [remote] --force
+
 # 推送所有分支到远程仓库
 $ git push [remote] --all
 ```
