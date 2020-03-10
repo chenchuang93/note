@@ -279,10 +279,10 @@ $ git reset [file]
 # 重置暂存区与工作区，与上一次commit保持一致
 $ git reset --hard
 
-# 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变
+# 在指定的commith后撤销所有commmit，并在本地保留更改
 $ git reset [commit]
 
-# 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致
+# 此命令将丢弃所有历史记录，并返回到指定的提交
 $ git reset --hard [commit]
 
 # 重置当前HEAD为指定commit，但保持暂存区和工作区不变
