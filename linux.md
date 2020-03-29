@@ -50,3 +50,12 @@ ssh -p xx user@ip
 
 
 https://kiwivm.64clouds.com/main-exec.php?mode=blacklistcheck
+
+
+# ShadowSocks
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh 
+chmod +x shadowsocks-all.sh 
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+
+
+netsh winsock reset
