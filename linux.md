@@ -44,6 +44,15 @@ wsl(windows subsystem forlinux)。wsl不支持linux kernel的一些特性。wsl�
 ```
 2、应用商店搜索linux
 
+3 wsl 安装 openssh-server
+sudo rm -rf /etc/apt/apt.conf.d/20snapd.conf
+
+
+Port = 8022
+ListenAddress 0.0.0.0        # 如果需要指定监听的IP则去除最左侧的井号，并配置对应IP，默认即监听PC所有IP
+PermitRootLogin yes           # 如果你需要用 root 直接登录系统则此处改为 yes
+PasswordAuthentication yes    # 将 no 改为 yes 表示使用帐号密码方式登录
+
 # ssh
 
 ssh -p xx user@ip
@@ -59,3 +68,8 @@ chmod +x shadowsocks-all.sh
 
 
 netsh winsock reset
+
+# apt/apt-get command找不到-问题修复
+
+wget http://ftp.cn.debian.org/debian/pool/main/a/apt/apt_1.4.9_amd64.deb
+dpkg -i apt_1.4.9_amd64.deb
