@@ -22,3 +22,7 @@ docker exec -it container-id/container-name bash
 docker exec -it container-id/container-name redis-cli
 # 帮助文档
 docker --help
+
+# 安装pgsql
+docker pull postgres:9.6
+docker run --name postgres -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres:9.6
